@@ -1,20 +1,10 @@
 {
-    "version": 2,
-    "builds": [
+    "routes": [
       {
-        "src": "api/hello.js",
-        "use": "@vercel/node"
-      }
-    ],
-        "routes": [
-        {
         "src": "/api/hello",
         "methods": ["GET"],
-        "dest": "/api/hello",
-        "headers": {
-                "Cache-Control": "s-maxage=1, stale-while-revalidate"
-            }
-        }
+        "dest": "/api/hello"
+      }
     ]
-}
+  }
   
