@@ -6,11 +6,15 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
-      {
+        "routes": [
+        {
         "src": "/api/hello",
-        "dest": "/api/hello.js"
-      }
+        "methods": ["GET"],
+        "dest": "/api/hello",
+        "headers": {
+                "Cache-Control": "s-maxage=1, stale-while-revalidate"
+            }
+        }
     ]
-  }
+}
   
