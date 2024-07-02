@@ -8,7 +8,7 @@ app.get('/api/hello', async (req, res) => {
   let clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
   if (clientIp === '::1' || clientIp === '127.0.0.1') {
-    clientIp = '8.8.8.8'; // Example: Google's public DNS IP address
+    clientIp = '8.8.8.8';
   }
 
   try {
